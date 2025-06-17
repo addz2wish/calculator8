@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companies Registration Fees Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body lang="en">
+
+  <!-- Language Switch Button -->
+  <div class="language-switch">
+    <button id="switchLang" onclick="switchLanguage()">Switch to Arabic</button>
+  </div>
+
+  <div class="calculator-container">
+    <h1 id="title">Companies Registration Fees Calculator</h1>
+    
+    <form id="feeCalculatorForm">
+      
+      <label for="companyGrade" id="companyGradeLabel">Company Grade</label>
+      <select id="companyGrade" name="companyGrade" required>
+        <option value="excellent">Excellent</option>
+        <option value="first">First</option>
+        <option value="second">Second</option>
+        <option value="third">Third</option>
+        <option value="fourth">Fourth</option>
+      </select>
+
+      <label for="categoryType" id="categoryTypeLabel">Category Type(s)</label>
+      <select id="categoryType" name="categoryType" multiple required>
+        <option value="construction">Construction</option>
+        <option value="service">Service</option>
+        <option value="supply">Supply</option>
+        <option value="consultancy">Consultancy</option>
+        <option value="it">Information Technology</option>
+      </select>
+
+      <label for="numSubcategories" id="numSubcategoriesLabel">Number of Subcategories</label>
+      <input type="number" id="numSubcategories" name="numSubcategories" min="0" required>
+
+      <label for="registrationDuration" id="registrationDurationLabel">Registration Duration (Years)</label>
+      <select id="registrationDuration" name="registrationDuration">
+        <option value="1">1 Year</option>
+        <option value="2">2 Years</option>
+        <option value="3">3 Years</option>
+        <option value="4">4 Years</option>
+        <option value="5">5 Years</option>
+      </select>
+
+      <label for="reyadaCardHolder">
+        <input type="checkbox" id="reyadaCardHolder" name="reyadaCardHolder"> Reyada Card Holder (Yes/No)
+      </label>
+
+      <p id="consultancyNote" class="errorMessage"></p>
+
+      <div class="results">
+        <p id="reviewFeeLabel">Review Fee: <span id="reviewFee">0 OMR</span></p>
+        <p id="registrationFeeLabel">Registration Fee: <span id="registrationFee">0 OMR</span></p>
+        <p id="subcategoryFeeLabel">Subcategory Fee: <span id="subcategoryFee">0 OMR</span></p>
+        <p id="totalFeeLabel">Total Fee: <span id="totalFee">0 OMR</span></p>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
